@@ -1,0 +1,26 @@
+<div id="MainBody" class="container">
+  <p class="m-0">Transform to</p>
+  <div class="btn-group" role="group">
+    <input (click)="SetLang('en')" type="radio" class="btn-check" name="btnradio" id="btnradioEn" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradioEn">En</label>
+
+    <input (click)="SetLang('ar')" type="radio" class="btn-check" name="btnradio" id="btnradioAr" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradioAr">Ar</label>
+  </div>
+
+  <div class="input-group my-3">
+    <label for="sourceText" class="input-group-text">source Text</label>
+    <textarea #sourceText (input)="setFinalResult(sourceText.value)" class="form-control" id="sourceText"
+      placeholder="Enter source Text" rows="5"></textarea>
+  </div>
+
+  <div class="d-flex align-items-center flex-wrap">
+    <button (click)="setFinalResult(sourceText.value)" class="btn btn-primary btn-sm" id="transformBtn">Transform</button>
+    <i (click)="CopyToClipboard()" [hidden]="ResultContent == ''" id="CopyBtn" class="bi bi-clipboard ms-2" title="Copy"></i>
+    <p [ngClass]="IsCopyBtnShowed ? '' : 'd-none'" class="ms-2" id="Copied">Copied</p>
+  </div>
+
+  <div class="text-break">
+    <p [hidden]="ResultContent == ''" id="output" class="d-inline">{{ResultContent}}</p>
+  </div>
+</div>

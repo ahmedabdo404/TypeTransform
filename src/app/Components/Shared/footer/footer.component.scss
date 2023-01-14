@@ -1,0 +1,107 @@
+@use "../../../../styles.scss"as *;
+
+/* main vars */
+$footerLineColor: #fff;
+$footerIconsColor: #fff;
+$footerBgColor: rgb(46, 46, 46);
+$footerShadowColor: rgb(70, 70, 70);
+
+/* footer */
+#footer {
+  // position: relative !imposrtant;
+  bottom: 0 !important;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  box-shadow: 0 -3px 25px $footerShadowColor;
+  @include SetFlex(column, center);
+}
+
+#contact {
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  text-align: center;
+  padding: 25px;
+  @include SetFlex(column, center);
+}
+
+#contact p {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: $text-color;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#footer #contact p::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 140px;
+  background-color: $footerLineColor;
+}
+
+#footer #contact p:after {
+  content: "";
+  position: relative;
+  display: inherit;
+  top: 3px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background-color: $footerLineColor;
+  border: $footerLineColor 1px solid;
+  border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+  #footer #contact p:before {
+    width: 75%;
+  }
+}
+
+#contact .contact-icons,
+#contact .contact-icons a {
+  @include SetFlex(row, center, true);
+}
+
+#contact .contact-icons a {
+  margin: 0.8rem 1rem;
+}
+
+#contact .contact-icons i {
+  color: $footerIconsColor;
+  font-size: 2rem;
+}
+
+.inner-footer {
+  position: relative;
+  line-height: 1.5;
+  bottom: 0;
+  text-align: center;
+  background-color: $footerBgColor;
+  color: $text-color;
+  width: 100%;
+  height: auto;
+  padding: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inner-footer .copyright {
+  font-size: 15px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  @include SetFlex(row, center, true);
+}
+
+.copyright b {
+  margin-left: 5px;
+}

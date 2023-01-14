@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@use "~bootstrap/scss/bootstrap.scss" as *;
+@use "~bootstrap-icons/font/bootstrap-icons.scss" as *;
+// global vars
+$text-color: #fff;
+
+//global Mixins
+@mixin SetFlex($direction, $position, $isWrap:false){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $position;
+  align-items: $position;
+  flex-wrap: if($isWrap, wrap, null); // null will not render this prop;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0 !important;
+}

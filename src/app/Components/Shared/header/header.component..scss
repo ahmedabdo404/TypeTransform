@@ -1,0 +1,16 @@
+$navShadowColor: rgb(70, 70, 70);
+
+/*start of nav */
+.nav {
+  padding: 1.5rem 5%;
+  width: inherit;
+  height: auto;
+  max-height: 200px;
+  box-shadow: 0 1px 25px $navShadowColor;
+}
+
+#Main-icon {
+  font-size: 2rem;
+}
+
+/*end of nav */

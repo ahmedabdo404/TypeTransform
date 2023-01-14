@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" id="footer" #footer [ngStyle]="FooterPosition">
+  <div id="contact">
+    <div>
+      <p>Contact</p>
+    </div>
+    <div class="contact-icons">
+      <a mat-icon-button matTooltip="Basic" href="https://t.me/ahmed_abdo_404" target="_blank" title="Telegram">
+        <i class="bi bi-telegram"></i>
+      </a>
+      <a mat-icon-button matTooltip="Primary" color="primary" href="https://www.linkedin.com/in/ahmed-abdo-306259229"
+        target="_blank" title="Linkedin">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a mat-icon-button matTooltip="Primary" color="primary" href="https://github.com/ahmedabdo404" target="_blank"
+        title="Github">
+        <i class="bi bi-github"></i>
+      </a>
+      <a mat-icon-button matTooltip="Primary" color="primary" href="https://www.ahmedelzahed.com" target="_blank"
+        title="Website">
+        <i class="bi bi-globe"></i>
+      </a>
+    </div>
+  </div>
+  <div class="inner-footer">
+    <span class="copyright">
+      &copy; Copyright <b>Ahmed Abdo</b>
+      . All Rights Reserved {{GetDate}}
+    </span>
+  </div>
+</mat-toolbar>

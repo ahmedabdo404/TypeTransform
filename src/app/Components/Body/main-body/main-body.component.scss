@@ -1,0 +1,38 @@
+@use "../../../../styles.scss"as *;
+
+$CopyFgColor: rgb(0, 121, 14);
+$CopyBgColor: rgb(240, 240, 240);
+$LightPadding: 0.2rem;
+$LightRaduis: 0.2rem;
+$MainPageFontSize: 1.3rem;
+
+// #MainBody {
+//   min-height: 600px;
+// }
+
+#output {
+  font-size: $MainPageFontSize;
+}
+
+#CopyBtn {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+#Copied {
+  background-color: $CopyBgColor;
+  padding: $LightPadding;
+  color: $CopyFgColor;
+  display: inline;
+  border-radius: $LightRaduis;
+}
+
+@media (max-width: 767px) {
+  #output {
+    font-size: 1rem;
+  }
+
+  #CopyBtn {
+    font-size: $MainPageFontSize;
+  }
+}
