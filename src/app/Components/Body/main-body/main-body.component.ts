@@ -27,7 +27,6 @@ export class MainBodyComponent implements OnInit {
     this.dataService.GetData().subscribe(
       data => {
         this.LanguagesData = data
-        console.log(this.LanguagesData)
       },
       err => console.log(err, "error"),
       () => console.log('Trying to retrive Data is Done')
@@ -42,7 +41,6 @@ export class MainBodyComponent implements OnInit {
 
   SetLang(Lang: string): void {
     this.CurrentLang = Lang == "en" ? Language.en : Language.ar
-    console.log("language set to", Lang)
   }
 
   TranformText(text: string): string {
@@ -81,7 +79,7 @@ export class MainBodyComponent implements OnInit {
     return transformedString;
   }
 
-  CopyToClipboard():void {
+  CopyToClipboard(): void {
     // Select the text field
     // output.select();
     // output.setSelectionRange(0, 99999); // For mobile devices
@@ -91,7 +89,7 @@ export class MainBodyComponent implements OnInit {
     this.ShowcopiedText()
   }
 
-  ShowcopiedText():void  {
+  ShowcopiedText(): void {
     this.IsCopyBtnShowed = true
     setTimeout(() => {
       this.IsCopyBtnShowed = false
