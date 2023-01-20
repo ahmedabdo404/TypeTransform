@@ -8,22 +8,21 @@ import { AfterViewInit, Component } from '@angular/core';
 export class FooterComponent implements AfterViewInit {
 
   GetDate: number;
-  FooterPosition: object;
+  // FooterPosition: object;
   // @ViewChild('footer') FooterTempVar: any;
 
   constructor() {
     this.GetDate = new Date().getFullYear();
-    this.FooterPosition = {};
+    // this.FooterPosition = {};
   }
 
   ngAfterViewInit(): void {
-    let scrollHeight = document.activeElement!.scrollHeight
-    let innerHeight = window.innerHeight
-    if (scrollHeight > innerHeight) {
-      this.FooterPosition = { position: "relative" }
-    } else {
-      this.FooterPosition = { position: "absolute" }
-    }
+    // let scrollHeight = document.activeElement!.scrollHeight
+    // let innerHeight = window.innerHeight
+    // if (scrollHeight > innerHeight) {
+    //   this.FooterPosition = { position: "relative" }
+    // } else {
+    //   this.FooterPosition = { position: "absolute" }
+    // }
   }
-
 }
