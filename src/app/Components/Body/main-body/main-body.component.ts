@@ -80,10 +80,6 @@ export class MainBodyComponent implements OnInit {
   }
 
   CopyToClipboard(): void {
-    // Select the text field
-    // output.select();
-    // output.setSelectionRange(0, 99999); // For mobile devices
-
     // Copy the text inside the text field
     navigator.clipboard.writeText(this.ResultContent);
     this.ShowcopiedText()
