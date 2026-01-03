@@ -19,10 +19,31 @@ $text-color: #fff;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
+html, body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+}
+
 a {
   text-decoration: none;
 }
 
 p {
   margin: 0 !important;
+}
+
+#footer {
+  margin-top: auto;
 }

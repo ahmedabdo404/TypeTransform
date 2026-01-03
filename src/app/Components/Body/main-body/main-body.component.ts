@@ -10,13 +10,18 @@ import { GetDataService } from 'src/app/Services/get-data.service';
 })
 export class MainBodyComponent implements OnInit {
 
-  LanguagesData: any;
+  LanguagesData: ILanguagesData;
   ResultContent: string;
   IsCopyBtnShowed: Boolean;
   CurrentLang: Language;
 
   constructor(private dataService: GetDataService) {
-    this.LanguagesData = {};
+    this.LanguagesData = {
+      enChars: [],
+      arChars: [],
+      shifEnChars: [],
+      shifArChars: []
+    };
     this.ResultContent = "";
     this.IsCopyBtnShowed = false;
     this.CurrentLang = Language.en;
