@@ -45,7 +45,8 @@ export class MainBodyComponent implements OnInit {
   }
 
   SetLang(Lang: string): void {
-    this.CurrentLang = Lang == "en" ? Language.en : Language.ar
+    this.CurrentLang = Lang == "en" ? Language.en : Language.ar;
+    this.setFinalResult(this.ResultContent);
   }
 
   TranformText(text: string): string {
