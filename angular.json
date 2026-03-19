@@ -56,7 +56,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "https://ahmedabdo404.github.io/TypeTransform/"
             },
             "development": {
               "buildOptimizer": false,
