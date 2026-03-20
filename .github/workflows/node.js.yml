@@ -9,6 +9,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       # 1. Check out the repository
@@ -32,9 +34,12 @@ jobs:
 
       # 5. Commit and push the /docs folder back to the repo
       - name: Commit and push /docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/ahmedabdo404/TypeTransform.git
           git add docs/
           git diff --staged --quiet || git commit -m "chore: update docs via GitHub Actions build"
           git pull --rebase origin master
