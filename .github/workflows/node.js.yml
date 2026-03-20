@@ -43,4 +43,4 @@ jobs:
           git add docs/
           git diff --staged --quiet || git commit -m "chore: update docs via GitHub Actions build"
           git pull --rebase origin master
-          git push
+          git push origin master
