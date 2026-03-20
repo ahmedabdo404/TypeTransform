@@ -2,9 +2,9 @@ name: Build and Deploy Angular App
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   build-and-deploy:
@@ -42,5 +42,5 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/ahmedabdo404/TypeTransform.git
           git add docs/
           git diff --staged --quiet || git commit -m "chore: update docs via GitHub Actions build"
-          git pull --rebase origin master
-          git push origin HEAD:master
+          git pull --rebase origin main
+          git push origin HEAD:main
