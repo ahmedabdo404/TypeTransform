@@ -2,9 +2,9 @@ name: Build and Deploy Angular App
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build-and-deploy:
@@ -37,5 +37,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/
           git diff --staged --quiet || git commit -m "chore: update docs via GitHub Actions build"
-          git pull --rebase origin main
+          git pull --rebase origin master
           git push
