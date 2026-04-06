@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { MainBodyComponent } from './main-body.component';
 
@@ -8,7 +10,9 @@ describe('MainBodyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainBodyComponent ]
+      declarations: [ MainBodyComponent ],
+      imports: [ HttpClientTestingModule ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   });
