@@ -27,12 +27,15 @@ jobs:
       # 3. Install dependencies
       - name: Install dependencies
         run: npm ci
+      # 4. test App
+      - name: test App
+        run: npx ng test --watch=false --browsers=ChromeHeadless
 
-      # 4. Build the Angular app into /docs
+      # 5. Build the Angular app into /docs
       - name: Build Angular app
         run: npx ng build --configuration production --base-href https://ahmedabdo404.github.io/TypeTransform/
 
-      # 5. Commit and push the /docs folder back to the repo
+      # 6. Commit and push the /docs folder back to the repo
       - name: Commit and push /docs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
